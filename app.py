@@ -21,4 +21,5 @@ def index():
 def general(name):
     return (f"<h1>hi {name}</h1>")
 
-#app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
