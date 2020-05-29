@@ -7,165 +7,165 @@ html,
   z-index: 0;
   border-style: solid;
   border-width: thick;
-  border-image:linear-gradient(white, transparent) 1;
-  border-bottom:1;
-  overflow-x: hidden; //horizontal
-  overflow-y: scroll; //vertical
+  border-image: linear-gradient(white, transparent) 1;
+  border-bottom: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-
 
 table {
   border-collapse: collapse;
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 
-
-
 /* Remove scrollbar space */
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
+  width: 0px; /* Remove scrollbar space */
 }
 
 body {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
 }
 
-#particles-js{
-  height:100%
+#particles-js {
+  height: 100%;
 }
 
-.container1{
-    min-height: 50vh;
-    right: 300px;
-    display: flex;
-		background-color: #000000;
-    align-items: top;
-    justify-content: center;
-    text-align: center;
-	  padding: 1;
-    z-index: -1;
-    opacity: .85;
-    height: 60%;
-    width:75%;
-    overflow: auto;
+.container1 {
+  min-height: 50vh;
+  right: 300px;
+  display: flex;
+  background-color: #000000;
+  align-items: top;
+  justify-content: center;
+  text-align: center;
+  padding: 1;
+  z-index: -1;
+  opacity: 0.85;
+  height: 60%;
+  width: 75%;
+  overflow: auto;
 }
 
-.container1{
-    min-height: 50vh;
-    right: 300px;
-    display: flex;
-		background-color: #000000;
-    align-items: top;
-    justify-content: center;
-    text-align: center;
-	  padding: 1;
-    z-index: -1;
-    opacity: .85;
-    height: 60%;
-    width:75%;
-    overflow: auto;
+.container1 {
+  min-height: 50vh;
+  right: 300px;
+  display: flex;
+  background-color: #000000;
+  align-items: top;
+  justify-content: center;
+  text-align: center;
+  padding: 1;
+  z-index: -1;
+  opacity: 0.85;
+  height: 60%;
+  width: 75%;
+  overflow: auto;
 }
 
-p { /* TEXT FOR PARAGRAPH */
-	font-family: 'Baloo Thambi 2', cursive;
-	font-size: 2rem;
+p {
+  /* TEXT FOR PARAGRAPH */
+  font-family: "Baloo Thambi 2", cursive;
+  font-size: 2rem;
   line-height: 1.6em;
-  opacity: .999;
-  color: #FFFFFF
-
-
+  opacity: 0.999;
+  color: #ffffff;
 }
 /* Heading fonts and formats */
 
-h1 { /* TEXT FOR TITLE */
-  font-family: 'Julius Sans One', sans-serif;
+h1 {
+  /* TEXT FOR TITLE */
+  font-family: "Julius Sans One", sans-serif;
   font-size: 3.2rem;
   line-height: 70%;
-	font-weight: bold;
-	text-align: center;
-  color: #FFFFFF;
-	margin: 0;
-  opacity: .999;
-
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.999;
 }
- h2 {/* TEXT FOR SUB-TITLE */
-	 font-family: 'Nothing You Could Do', cursive;
-    color: #FFFFFF;
-    font-size: 2.2em;
-    margin: 0;
-    padding: 0.1em;
-    padding-left: 1em;
-    text-align: center;
-    font-weight: 1000;
-    opacity: .999;
-    text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 1em black;
-
-}
-
-h3 {/* TEXT FOR "CONTACT ME" */
-		font-family: 'Rock Salt', cursive;
-    color: #FFFFFF;
-    font-size: 2em;
-    margin: 0;
-    padding: 0.1em;
-    padding-left: 1em;
-    text-align: center;
-    font-weight: plain;
-    opacity: .999;
-    text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 1em black;
-
+h2 {
+  /* TEXT FOR SUB-TITLE */
+  font-family: "Nothing You Could Do", cursive;
+  color: #ffffff;
+  font-size: 2.2em;
+  margin: 0;
+  padding: 0.1em;
+  padding-left: 1em;
+  text-align: center;
+  font-weight: 1000;
+  opacity: 0.999;
+  text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 1em black;
 }
 
-h4 {/* TEXT FOR bullet points */
-  font-family: 'Baloo Thambi 2', cursive;
-    color: #000000;
-    font-size: 1.6em;
-    margin: 0;
-    padding-left: 1em;
-    text-align: left;
-    font-weight: 1;
-    opacity: .999;
+h3 {
+  /* TEXT FOR "CONTACT ME" */
+  font-family: "Rock Salt", cursive;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 0;
+  padding: 0.1em;
+  padding-left: 1em;
+  text-align: center;
+  font-weight: plain;
+  opacity: 0.999;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 1em black;
 }
 
-h5 {/* TEXT FOR Collapsible */
-  font-family: 'Nothing You Could Do', cursive;
-   color: #FFFFFF;
-   font-size: 1.8em;
-   margin: 0;
-   font-weight: 1;
-   text-align: left;
-   font-weight:lighter;
-   opacity: .999;
-
+h4 {
+  /* TEXT FOR collapsible texts */
+  font-family: "Baloo Thambi 2", cursive;
+  color: #000000;
+  font-size: 1.6em;
+  margin: 0;
+  padding-left: 1em;
+  text-align: left;
+  font-weight: 1;
+  opacity: 0.999;
 }
 
-h6 { /* TEXT FOR FOOTER  */
-    font-family: Skia, Futura, Verdana, Ariel;
-    color: #FFFFFF;
-    font-size: 0.75em;
-    margin: 0;
-    padding: 0.1em;
-    padding-left: 1em;
-    text-align: center;
-    font-weight: plain;
-    opacity: .999;
+h5 {
+  /* TEXT FOR Collapsible */
+  font-family: "Nothing You Could Do", cursive;
+  color: #ffffff;
+  font-size: 1.8em;
+  margin: 0;
+  font-weight: 1;
+  text-align: left;
+  font-weight: lighter;
+  opacity: 0.999;
+}
+
+h6 {
+  /* TEXT FOR FOOTER  */
+  font-family: Skia, Futura, Verdana, Ariel;
+  color: #ffffff;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0.1em;
+  padding-left: 1em;
+  text-align: center;
+  font-weight: plain;
+  opacity: 0.999;
 }
 fade {
-    position: absolute;
-    bottom: 0px;
-    display: block;
-    width: 100%;
-    height: 55px;
-    background-image: linear-gradient(to bottom,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.9)
-    100%);
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  height: 55px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.9) 100%
+  );
 }
 
 /*Collapsible*/
@@ -179,12 +179,13 @@ fade {
   text-align: left;
   outline: none;
   font-size: 15px;
-  opacity:.85;
+  opacity: 0.85;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #555;
-  opacity:.999;
+  opacity: 0.999;
 }
 
 .content {
@@ -193,49 +194,47 @@ fade {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
-  opacity:.85;
-
+  opacity: 0.85;
 }
-
 
 /* Margins and alignment for images in the content division */
 #content img {
-            padding: 1px;
-            float: right;
-            margin: 0 0 1em 1em;
-        }
+  padding: 1px;
+  float: right;
+  margin: 0 0 1em 1em;
+}
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Page Layout */
 
 #header {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: #FFFFFF;
-    opacity:.999
-    }
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.999;
+}
 
 #content {
-    margin-top: 10px;
-    color: #FFFFFF
+  margin-top: 10px;
+  color: #ffffff;
 }
 
 /* Layout for divisions containing images and their captions */
 #picture {
-    float: left;
-    font-size: 8pt;
-    margin: 2 2 2em 1.8em;
-    opacity: .999;
-    width:25%;
-    z-index:1;
+  float: left;
+  font-size: 8pt;
+  margin: 2 2 2em 1.8em;
+  opacity: 0.999;
+  width: 25%;
+  z-index: 1;
 }
 
 #footer {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: #FFFFFF
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
 }
