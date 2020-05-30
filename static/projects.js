@@ -9,26 +9,26 @@ app.config(function($interpolateProvider) {
 app.controller('mainCtrl', function($scope) {
   $scope.boxes = [{
       name: 'Covid Face Mask Classifier',
-      image: '/Users/sanjay/Desktop/CODE/Python/flask/static/images/face_mask900x900edited.jpg',
-
-
-      //'/Users/sanjay/Desktop/CODE/Python/flask/static/images/face_mask900x900edited.jpg',
+      image: 'https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/face_mask900x900edited.jpg',
       description: 'Implemented a LeNet computer-vision model that can classify humans based on whether or not they are wearing a face mask with 95% accuracy.',
-      technologies: ["Keras Deep Learning", "Python", "Visual Studio", "Google Colaboratory"],
+      technologies: ["Python", "Keras Deep Learning", "Visual Studio", "Google Colaboratory"],
       link: "https://github.com/Sanjay404/Covid19-Face-Mask-Classifier"
     }, {
       name: 'HooHacks 2020',
-      image: '/Users/sanjay/Desktop/CODE/Python/flask/static/images/covid_900x900edited.jpg',
-      description: 'Built a website that visualized and alerted users of predicted Covid19 cases, estimated by our Keras deep learning time-series model, using GCPs Maps API. I specifically worked on coding an interface for our website with GCPs Maps API. In addition, I contributed to researching the deep learning model used in the group project. I used Python, Keras, Google Cloud Platform, JavaScript, and HTML. ',
+      image: 'https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/covid_900x900edited.jpg',
+      technologies: ["Python", "Keras Deep Learning", "Google Cloud Platform/Google Colaboratory", "HTML/CSS/JavaScript", ],
+      description: 'Built a website that visualized and alerted users of predicted Covid19 cases, estimated by our Keras deep learning time-series model, using GCPs Maps API. I specifically worked on coding an interface for our website with GCPs Maps API. In addition, I contributed to researching the deep learning model used in the group project. ',
       link: "https://github.com/sagars729/HooHacks20"
     }, {
       name: 'Stock Prediction',
-      image: '/Users/sanjay/Desktop/CODE/Python/flask/static/images/stock900x900edited.jpg',
+      image: 'https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/stock900x900edited.jpg',
+      technologies: ["Python", "Keras Deep Learning", "Visual Studio", ""],
       description: 'Implemented data visualization and developed a Deep Learning NLP Model to predict TSLA (Tesla) stock price using Keras Deep Learning API. Currently working on integrating sentiment analysis for effective stock prediction.',
       link: "https://github.com/Sanjay404/TESLA-KERAS-ANALYSIS"
     }, {
       name: 'This Website!',
-      image: '/Users/sanjay/Desktop/CODE/Python/flask/static/images/websiteIMG_900x900edited.jpg',
+      image: 'https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/websiteIMG_900x900edited.jpg',
+      technologies: ["HTML/CSS", "JavaScipt", "AngularJS", "Flask"],
       description: ' A personal static website I built using​ HTML, JavaScript, AngularJS, CSS, and the particles.js library. Currently implementing Flask as a backend and working on hosting the website with AWS Lightsail',
       link: "https://github.com/Sanjay404/Personal-Website"
     },

@@ -38,21 +38,6 @@ body {
   height: 100%;
 }
 
-.container1 {
-  min-height: 50vh;
-  right: 300px;
-  display: flex;
-  background-color: #000000;
-  align-items: top;
-  justify-content: center;
-  text-align: center;
-  padding: 1;
-  z-index: -1;
-  opacity: 0.85;
-  height: 60%;
-  width: 75%;
-  overflow: auto;
-}
 
 .container1 {
   min-height: 50vh;

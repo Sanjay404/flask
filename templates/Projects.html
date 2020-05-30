@@ -33,9 +33,32 @@
           <img ng-src="//item.item.image//" alt="" />
           <div class="content">
             <h2>//selected[0].item.description//</h2>
-            {% for i in range(3)%}
-            <li>//selected[0].item.technologies// </li>
-            {% endfor %}
+            <!--
+            <p ng-repeat="tech in selected[0].item.technologies">
+            <h2>{{tech}}</h2>
+            </p>
+            -->
+
+            <br>
+            <br>
+            <br>
+            <div class="container1">
+              <h4>
+                <u>Technologies:</u>
+                <li>
+                  //selected[0].item.technologies[0]//
+                </li>
+                <li>
+                  //selected[0].item.technologies[1]//
+                </li>
+                <li>
+                  //selected[0].item.technologies[2]//
+                </li>
+                <li>
+                  //selected[0].item.technologies[3]//
+                </li>
+              </h4>
+            </div>
             <h3>Check it out <a href='//selected[0].item.link//'> here! </a> </h3>
           </div>
         </div>
@@ -44,7 +67,7 @@
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js'></script>
-    <script type=text/javascript src="{{url_for('static', filename='projects.js') }}"></script>
+    <script type=text/javascript src=" {{url_for('static', filename='projects.js') }}"></script>
 
   </body>
 
