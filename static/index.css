@@ -26,6 +26,8 @@ label:focus {
     background: #fff;
     width: 240px;
     height: 100%;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
     transform: translate3d(-240px, 0, 0);
     transition: transform 0.35s;
 }
