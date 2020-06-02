@@ -1,0 +1,232 @@
+html,
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-style:solid;
+  border-width: thick;
+  border-image:linear-gradient(white, transparent) 1;
+  border-bottom:1;
+  overflow-x: hidden; //horizontal
+  overflow-y: scroll; //vertical
+}
+
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+/* Remove scrollbar space */
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+#particles-js{
+  height:100%
+}
+
+.container1{
+    min-height: 50vh;
+    right: 300px;
+    display: flex;
+		background-color: #000000;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+	  padding: 1;
+    z-index: -1;
+    opacity: .85;
+    height: 60%;
+    width:75%;
+    overflow: auto;
+}
+
+
+p { /* TEXT FOR PARAGRAPH */
+	font-family: 'Baloo Thambi 2', cursive;
+	font-size: 2.1rem;
+  line-height: 1.8em;
+  opacity: .999;
+  color: #FFFFFF
+
+}
+/* Heading fonts and formats */
+
+h1 { /* TEXT FOR TITLE */
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.6rem;
+  line-height: 70%;
+	font-weight: bold;
+	text-align: center;
+  color: #FFFFFF;
+	margin: 0;
+  opacity: .999;
+
+}
+ h2 {/* TEXT FOR SUB-TITLE */
+	 font-family: 'Nothing You Could Do', cursive;
+    color: #FFFFFF;
+    font-size: 2em;
+    line-height: 1.6em;
+    font-weight: 1000;
+    text-shadow: 1px 1px 2px grey, 0 0 1em grey, 0 0 1em grey;
+
+}
+
+
+
+fade {
+    position: absolute;
+    bottom: -100px;
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-image: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.9)
+    100%);
+}
+
+/*Collapsible*/
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  opacity:.85;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+  opacity:.999;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  opacity:.85;
+
+}
+
+
+/* Margins and alignment for images in the content division */
+#content img {
+            padding: 1px;
+            float: right;
+            margin: 0 0 1em 1em;
+        }
+a {
+    text-decoration: none;
+}
+
+/* Page Layout */
+
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #FFFFFF;
+    opacity:.999
+    }
+
+#content {
+    margin-top: 10px;
+    color: #FFFFFF
+}
+
+/* Layout for divisions containing images and their captions */
+#picture {
+    float: left;
+    font-size: 8pt;
+    margin: 2 2 2em 1.8em;
+    opacity: .999;
+    width:25%;
+    z-index:1;
+}
+
+#footer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #FFFFFF
+}
+
+/*Button EXIT*/
+
+.draw-border {
+	 box-shadow: inset 0 0 0 4px grey;
+	 color: grey;
+	 transition: color 0.25s 0.0833333333s;
+	 position:relative;
+}
+ .draw-border::before, .draw-border::after {
+	 border: 0 solid transparent;
+	 box-sizing: border-box;
+	 content: '';
+	 pointer-events: none;
+	 position: absolute;
+	 width: 0;
+	 height: 0;
+	 bottom: 0;
+	 right: 0;
+}
+ .draw-border::before {
+	 border-bottom-width: 4px;
+	 border-left-width: 4px;
+}
+ .draw-border::after {
+	 border-top-width: 4px;
+	 border-right-width: 4px;
+}
+ .draw-border:hover {
+	 color: white;
+}
+ .draw-border:hover::before, .draw-border:hover::after {
+	 border-color: white;
+	 transition: border-color 0s, width 0.25s, height 0.25s;
+	 width: 100%;
+	 height: 100%;
+}
+ .draw-border:hover::before {
+	 transition-delay: 0s, 0s, 0.25s;
+}
+ .draw-border:hover::after {
+	 transition-delay: 0s, 0.25s, 0s;
+}
+ .btn {
+	 background: none;
+	 border: none;
+	 cursor: pointer;
+   height: auto;
+   width: auto;
+   text-align: center;
+	 line-height: 1.0;
+   left: 45%;
+	 font: 700 1.2rem 'Roboto Slab', sans-serif;
+	 padding: 1em 2em;
+	 letter-spacing: 0.05rem;
+}
+ .btn:focus {
+	 outline: 2px dotted grey;
+}

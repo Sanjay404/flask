@@ -28,8 +28,8 @@ app.controller('mainCtrl', function($scope) {
     }, {
       name: 'This Website!',
       image: 'https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/websiteIMG_900x900edited.jpg',
-      technologies: ["HTML/CSS", "JavaScipt", "AngularJS", "Flask"],
-      description: ' A personal static website I built using​ HTML, JavaScript, AngularJS, CSS, and the particles.js library. Currently implementing Flask as a backend and working on hosting the website with AWS Lightsail',
+      technologies: ["HTML/CSS/JavaScript", "Amazon Web Services ", "AngularJS", "Flask"],
+      description: ' A personal static website I built using​ HTML, JavaScript, AngularJS, CSS, and the particles.js library. This website currently implements Flask as a backend and is hosted with AWS Lightsail',
       link: "https://github.com/Sanjay404/Personal-Website"
     },
     /*{

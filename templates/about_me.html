@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<!--PARTICLES -->
+<html>
+
+  <head>
+    <!--Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Indie+Flower|Julius+Sans+One|Nothing+You+Could+Do|Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='about.css') }}">
+
+  </head>
+
+  <body>
+    <canvas class="background"></canvas>
+    <title>About Sanjay</title>
+    <!--IMAGES WITH EMBEDDED LINKS -->
+    <div id="header">
+      <div align="left">
+        <a href="http://www.umd.edu"><IMG SRC="https://brand.umd.edu/trademarks/marks/gr/informal.gif" HEIGHT=50></a>
+        <a href="https://www.cs.umd.edu/"><IMG SRC="https://www.cs.umd.edu/sites/default/files/logo_top_bottom.png" HEIGHT=50></a>
+      </div>
+
+      <!--TITLE-->
+      <p>
+      <h1><b><i>Sanjay Srikumar</i></b></h1>
+      <h2><b>Computer Science- Data Science Specialization</b></h2>
+      </p>
+    </div>
+
+    <!-- Centered PARAGRAPH -->
+    <table>
+      <th>
+      <td align="center">
+        <div class="container1">
+          <p>
+            I am a Sophomore at the University of Maryland, College Park,
+            pursuing a bachelor's degree in Computer Science with a Data Science specialization and a minor in
+            Advanced Cybersecurity (ACES). I am interested in developing my knowledge as a
+            full-stack developer with an emphasis on <u>deep learning</u> and <u>data analytics</u>.
+          </p>
+        </div>
+      </td>
+      </th>
+    </table>
+    <button onclick="window.location.href='/'" class="btn draw-border">Back!</button>
+
+    <!--Fade Effect -->
+    <fade />
+    <!--Particle Background imports -->
+    <script type=text/javascript src=" {{url_for('static', filename='about.js') }}"></script>
+    <script type=text/javascript src=" {{url_for('static', filename='particles.min.js') }}"></script>
+  </body>
+
+</html>

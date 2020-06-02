@@ -1,170 +1,33 @@
 <!DOCTYPE HTML>
-
-<!--PARTICLES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <html>
+	<!--Google Fonts -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index.css') }}">
 
-	<head>
-		<!--Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Indie+Flower|Julius+Sans+One|Nothing+You+Could+Do|Rock+Salt&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index.css') }}">
-
-
-	<body>
-		<canvas class="background"></canvas>
-		<title>Sanjay Srikumar Website</title>
-		<!--IMAGES WITH EMBEDDED LINKS -->
-		<div id="header">
-			<div align="left">
-				<a href="http://www.umd.edu"><IMG SRC="https://brand.umd.edu/trademarks/marks/gr/informal.gif" HEIGHT=50></a>
-				<a href="https://www.cs.umd.edu/"><IMG SRC="https://www.cs.umd.edu/sites/default/files/logo_top_bottom.png" HEIGHT=50></a>
-			</div>
-
-			<!--TITLE-->
-			<p>
-			<h1><b>Sanjay Srikumar</b></h1>
-			</p>
-		</div>
-		<div id="content">
-		</div>
-		<!-- SUB-TITLE -->
-		<div>
-			<h2><i>Computer Science- Data Science Specialization</i><br></h2>
-			<br>
-			<br>
-			<br>
-			<br>
-		</div>
-
-		<table>
-			<th>
-				<div>
-					<!-- IMAGE  -->
-					<div id="picture">
-						<img src=https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/sanjay.jpg width=400><br>
-					</div>
-			</th>
-
-			<!-- PARAGRAPH -->
-			<th>
-			<td align="center">
-				<div class="container1">
-					<p>
-						Hello! My name is Sanjay Srikumar and I am a Sophomore at the University of Maryland, College Park,
-						pursuing a bachelor's degree in Computer Science with a Data Science specialization and a minor in
-						Advanced Cybersecurity (ACES). In addition to my formal education, I have progressed
-						my knowledge as a full-stack developer with an emphasis on machine learning and data analytics. I am
-						keen to develop my understanding and apply what I have learned from my own personal projects to real world
-						projects and make an impact on my community.
-					</p>
-				</div>
-			</td>
-			</th>
-
-		</table>
-
-		<br><br><br><br><br><br><br><br>
-
-
-		<!-- Collapsibles  -->
-		<div>
-			<h2>Projects: </h2>
-			<br>
-
-			<button class="collapsible">
-				<h5>Covid Face Mask Classifier</h5>
-			</button>
-			<div class="content">
-				<h4>
-					Implemented a LeNet computer-vision model that can classify humans
-					based on whether or not they are wearing a face mask with 95% accuracy.
-					Check it out <a href="https://github.com/Airsite1/Covid19-Face-Mask-Classifier/blob/master/README.md">here!</a>!
-				</h4>
-			</div>
-			<button class="collapsible">
-				<h5>HooHacks 2020</h5>
-			</button>
-			<div class="content">
-				<h4>
-					Built a website that visualized and alerted users of predicted
-					Covid19 cases, estimated by our Keras deep learning time-series
-					model, using GCPs Maps API.
-					I specifically worked on coding an interface for our website with GCPs Maps API.
-					In addition, I contributed to researching the deep learning model used in the group project.
-					I used Python, Keras, Google Cloud Platform, JavaScript, and HTML.
-					Check it out <a href="https://github.com/Airsite1/Covid19-Face-Mask-Classifier/blob/master/README.md">here!</a>!
-				</h4>
-			</div>
-			<button class="collapsible">
-				<h5>Stock Prediction</h5>
-			</button>
-			<div class="content">
-				<h4>
-					Implemented data visualization and developed a Deep Learning NLP
-					Model to predict TSLA (Tesla) stock price using Keras Deep
-					Learning API. Currently working on integrating sentiment analysis for
-					effective stock prediction.
-				</h4>
-			</div>
-			<button class="collapsible">
-				<h5>BRFSS Regression Analysis </h5>
-			</button>
-			<div class="content">
-				<h4> Regression Analysis of The Behavioral Risk Factor Surveillance
-					System (BRFSS) dataset using R. I analyzed trends in data to
-					visualize relationships between mental health, sex, number of
-					children, blood pressure, and other variables.
-				</h4>
+	<div id="wrapper">
+		<div id="info">
+			<div id="info-content">
+				<h1><strong>Sanjay Srikumar</strong>
+					Computer Science</h1>
 			</div>
 		</div>
-		<br>
-		<br>
-		<br>
-		<!-- Script for Collapsible-->
-		<script>
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
 
-			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.maxHeight) {
-						content.style.maxHeight = null;
-					} else {
-						content.style.maxHeight = content.scrollHeight + "px";
-					}
-				});
-			}
-		</script>
+		<input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+		<div class="menu">
+			<label class="menu-toggle" for="menu"><span>Toggle</span></label>
+			<ul>
+				<li>
+					<a href="about">About</a>
+				</li>
+				<li>
+					<a href="Projects">Projects</a>
+				</li>
+				<li>
+					<a href="Contact">Contact Me</a>
+				</li>
+				<li>
+					<a href="https://www.terpconnect.umd.edu/~sanjays/Personal-Website/sanjay.html">My Old Website</a>
+				</li>
 		</div>
-		<br>
-		<br>
-		<br>
-
-		<!-- EMBEDDED LINKS-->
-		<div>
-			<h3> <a href="mailto:sanjays@umd.edu">Contact me!</a>
-				<br>
-
-				<a href="https://www.linkedin.com/in/sanjaysrikumar/"><IMG SRC="https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png" width="128">
-					<a href="https://github.com/Sanjay404"><IMG SRC="https://img.icons8.com/bubbles/2x/github.png" width="125">
-						<a href="https://thinfi.com/nerq"><IMG SRC="https://cdn.clipart.email/d108af075e80cd04bc9546f2be2bdf0e_custom-writing-term-papers-generic-high-quality-products-the-_745-750.png" width="150">
-			</h3>
-		</div>
-		<fade />
-
-
-		<!--Particle Background -->
-		<script type=text/javascript src="{{
-  url_for('static', filename='personal.js') }}"></script>
-		<script type=text/javascript src="{{
-url_for('static', filename='particles.min.js') }}"></script>
-	</body>
-	<!-- FOOTER -->
-	<br><br><br><br><br>
-	<div id="footer">
-		<h6>Last Updated April 16, 2020<h6>
-
-	</div>
 
 </html>

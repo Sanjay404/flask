@@ -1,0 +1,118 @@
+html, body {
+  margin: 0;
+  background-color: blue;
+  font-family: 'Raleway Dots', sans-serif;
+}
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: lightgrey;
+}
+section #services {
+  text-align: center;
+  transform: translatez(0);
+}
+section #services h2 {
+  margin: 80px 0px 40px;
+  color: #fff;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+section #services li {
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+section #services li div {
+  width: 120px;
+  height: 120px;
+  color: #74d4b3;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+section #services li a {
+  color: orange;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+section #services li span {
+  width: 120px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+/*Button EXIT*/
+
+.draw-border {
+	 box-shadow: inset 0 0 0 4px white;
+	 color: white;
+	 transition: color 0.25s 0.0833333333s;
+	 position:relative;
+}
+ .draw-border::before, .draw-border::after {
+	 border: 0 solid transparent;
+	 box-sizing: border-box;
+	 content: '';
+	 pointer-events: none;
+	 position: absolute;
+	 width: 0;
+	 height: 0;
+	 bottom: 0;
+	 right: 0;
+}
+ .draw-border::before {
+	 border-bottom-width: 4px;
+	 border-left-width: 4px;
+}
+ .draw-border::after {
+	 border-top-width: 4px;
+	 border-right-width: 4px;
+}
+ .draw-border:hover {
+	 color: orange;
+}
+ .draw-border:hover::before, .draw-border:hover::after {
+	 border-color: orange;
+	 transition: border-color 0s, width 0.25s, height 0.25s;
+	 width: 100%;
+	 height: 100%;
+}
+ .draw-border:hover::before {
+	 transition-delay: 0s, 0s, 0.25s;
+}
+ .draw-border:hover::after {
+	 transition-delay: 0s, 0.25s, 0s;
+}
+ .btn {
+	 background: none;
+	 border: none;
+	 cursor: pointer;
+   height: auto;
+   width: auto;
+   text-align: center;
+	 line-height: 1.0;
+   left: 47%;
+	 font: 700 1.2rem 'Roboto Slab', sans-serif;
+	 padding: 1em 2em;
+	 letter-spacing: 0.05rem;
+}
+ .btn:focus {
+	 outline: 2px dotted #white;
+}
