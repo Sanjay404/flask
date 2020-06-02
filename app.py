@@ -40,6 +40,10 @@ IN HTML, I use {{temp}}
 def index():
     return render_template("index.html")
 
+@app.route("/Resume")
+def resume():
+    return redirect("https://thinfi.com/nerq")
+
 @app.route("/<string:name>")
 def general(name):
     return ("<h1>This Page Does Not Exist</h1>")
