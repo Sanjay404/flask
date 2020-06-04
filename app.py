@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 '''
-makes a variable called 'app' that is the 
+makes a variable called 'app' that is the
 source of this web app so i can tie differnt web functions or routesto it
 '''
 app = Flask(__name__)
@@ -31,9 +31,9 @@ NOTES:
 routes '/' (which is essentially the landing page)
 ________________________________________________________________________________
 Can pass additional arguments to render_template
-EX: 
+EX:
 temp= "hi"
-render_template("index.html", temp) 
+render_template("index.html", temp)
 IN HTML, I use {{temp}}
 '''
 @app.route("/")
@@ -42,7 +42,7 @@ def index():
 
 @app.route("/Resume")
 def resume():
-    return redirect("https://thinfi.com/nerq")
+    return redirect("https://www.terpconnect.umd.edu/~sanjays/Personal-Website%20Externals/Sanjay_Srikumar_Resume.pdf")
 
 @app.route("/<string:name>")
 def general(name):
@@ -54,7 +54,7 @@ def about():
 
 @app.route("/Projects")
 def projects():
-    return render_template("projects.html")
+    return render_template("Projects.html")
 @app.route("/Contact")
 def contact():
     return render_template("contact.html")
