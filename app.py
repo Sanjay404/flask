@@ -1,31 +1,16 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+from werkzeug import secure_filename
+import numpy as np
+import cv2
+import animal
+from PIL import Image
+import os
 '''
 makes a variable called 'app' that is the
 source of this web app so i can tie differnt web functions or routesto it
 '''
 app = Flask(__name__)
 '''
-app.config.update(dict(
-    SECRET_KEY="powerful secretkey",
-    WTF_CSRF_SECRET_KEY="a csrf secret key",
-    MAIL_SERVER = "localhost",
-    MAIL_PORT = 25,
-    MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'srikumar.sanjay@gmail.com',
-    MAIL_PASSWORD = 'blaster1',
-))
-
-def send_email(to_email,from_email,mydict):
-  result_dict = {}
-  try:
-      msg = Message("Message from your website",sender=from_email,recipients=[to_email])
-      msg.body="Email from your website"
-      msg.html= render_template("email.html",contact_email=mydict['contact_email'],message=mydict['message'])
-      mail.send(msg)
-      flash("Thanks for contacting me. I will get back to you soon!","success")
-  except Exception as e:
-      flash("Error sending email".format(str(e)),"error")
-
 ________________________________________________________________________________
 NOTES:
 routes '/' (which is essentially the landing page)
@@ -58,6 +43,47 @@ def projects():
 @app.route("/Contact")
 def contact():
     return render_template("contact.html")
+
+UPLOAD_FOLDER = '/Users/sanjay/Desktop/temp'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
+@app.route('/Animal')
+def upload_file():
+   return render_template('upload.html')
+
+
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_files():
+   if request.method == 'POST':
+       # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename) #string name of file
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            predictions = []
+            images = Image.open(file)
+            images = np.array(images)
+            shape = (128,128)
+            images = cv2.resize(images,(shape[0],shape[1]))
+            images = cv2.cvtColor(np.array(images), cv2.COLOR_BGR2RGB)
+            print('running animal.flask')
+            predictions.append(animal.predict(images))
+            filename = 'http://127.0.0.1:5000/uploads/' + filename
+            ret = zip(url_for('upload_file', filename=filename), predictions)
+            return render_template('display_imgs.html', iterate = ret)
+            #return render_template('display_imgs.html', images = url_for('upload_file', filename=filename), predictions= predictions)
+        return render_template('upload.html')
+
+
+@app.route('/uploads/<filename>')
+def send_file(filename):
+    return send_from_directory(UPLOAD_FOLDER, filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
