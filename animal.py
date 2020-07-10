@@ -41,7 +41,7 @@ def predict(image):
     image = np.vstack([x])
     classes = VGG19_model.predict(image, batch_size=1)
     index_max = np.argmax(classes)
-    return (class_names[index_max] + f': {classes[0][index_max]}%')
+    return (class_names[index_max] + f': {100*classes[0][index_max]}%')
     '''
     for img in images:
         x = np.expand_dims(img, axis=0)

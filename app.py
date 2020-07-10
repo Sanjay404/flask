@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+
 from werkzeug import secure_filename
 import numpy as np
 import cv2
@@ -64,19 +65,31 @@ def upload_files():
        # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         file = request.files['file']
         if file and allowed_file(file.filename):
+            
             filename = secure_filename(file.filename) #string name of file
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             predictions = []
+            files = []
             images = Image.open(file)
             images = np.array(images)
             shape = (128,128)
             images = cv2.resize(images,(shape[0],shape[1]))
             images = cv2.cvtColor(np.array(images), cv2.COLOR_BGR2RGB)
-            print('running animal.flask')
-            predictions.append(animal.predict(images))
             filename = 'http://127.0.0.1:5000/uploads/' + filename
-            ret = zip(url_for('upload_file', filename=filename), predictions)
-            return render_template('display_imgs.html', iterate = ret)
+            predictions.append(animal.predict(images))
+            files.append(filename)
+            print()
+            print()
+            print()
+            print()
+            
+            ret = {filename : predictions}
+            print()
+            print()
+            print()
+            print()
+            print(list(zip(*ret)))
+            return render_template('display_imgs.html', iterate = ret) 
             #return render_template('display_imgs.html', images = url_for('upload_file', filename=filename), predictions= predictions)
         return render_template('upload.html')
 

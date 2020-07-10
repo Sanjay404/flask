@@ -4,9 +4,10 @@
 	<body>
 		<form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
 
-			{% for filename, pred in iterate %}
-			{{filename}}
-			<h1>{{pred}}<img src="{{ url_for('send_file', filename=filename) }}"></h1>
+			{% for key in iterate %}
+			{{img}}
+			<h1>{{iterate[key][0]}}<img src={{key}}></h1>
+			<br><br><br>
 			{% endfor %}
 
 		</form>
