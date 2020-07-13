@@ -42,12 +42,3 @@ def predict(image):
     classes = VGG19_model.predict(image, batch_size=1)
     index_max = np.argmax(classes)
     return (class_names[index_max] + f': {100*classes[0][index_max]}%')
-    '''
-    for img in images:
-        x = np.expand_dims(img, axis=0)
-        images = np.vstack([x])
-        classes = VGG19_model.predict(images, batch_size=1)
-        index_max = np.argmax(classes)
-        print(class_names[index_max] + f'at {classes[index_max]}%')
-        dic.append(images, class_names[index_max] + f'at {classes[index_max]}%')
-    '''
