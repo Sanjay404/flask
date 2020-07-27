@@ -1,6 +1,6 @@
 html, body {
   margin: 0;
-  background-color: blue;
+  background-color: black;
   font-family: 'Raleway Dots', sans-serif;
 }
 a:link {
@@ -21,6 +21,8 @@ section #services h2 {
   font-size: 2.4em;
   text-transform: uppercase;
   text-align: center;
+  font-weight: bolder;
+  font-family: 'sans-serif';
 }
 section #services li {
   width: 120px;
@@ -40,7 +42,7 @@ section #services li div {
   transition: all 0.5s ease;
 }
 section #services li a {
-  color: orange;
+  color: black;
 }
 section #services li div:hover {
   transform: rotate(360deg);
@@ -61,8 +63,8 @@ section #services li span {
 /*Button EXIT*/
 
 .draw-border {
-	 box-shadow: inset 0 0 0 4px white;
-	 color: white;
+	 box-shadow: inset 0 0 0 4px lightgrey;
+	 color: lightgrey;
 	 transition: color 0.25s 0.0833333333s;
 	 position:relative;
 }
@@ -86,10 +88,10 @@ section #services li span {
 	 border-right-width: 4px;
 }
  .draw-border:hover {
-	 color: orange;
+	 color: white;
 }
  .draw-border:hover::before, .draw-border:hover::after {
-	 border-color: orange;
+	 border-color: white;
 	 transition: border-color 0s, width 0.25s, height 0.25s;
 	 width: 100%;
 	 height: 100%;
